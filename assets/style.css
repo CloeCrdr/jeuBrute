@@ -103,3 +103,25 @@ body a {
     background-color: #42353759;
     padding: 10px;
 }
+
+.erreur {
+    display: block;
+    text-align: center;
+    font-weight: lighter;
+    font-family: bebas neue;
+    background: -webkit-linear-gradient(45deg,#75848e, #8d9d9a);
+    background-clip: border-box;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 4px;
+    padding: 0;
+    margin: 0;
+    margin-top: 0px;
+    margin-top: 10px;
+}
+
+.material-symbols-outlined {
+    font-size: 14px!important;
+    padding: 0px 0px 1px 1px;
+}

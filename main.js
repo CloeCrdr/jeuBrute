@@ -114,7 +114,7 @@ app.post("/buyshop", (req,res) => {
     selectObjById(req.body.objetshop).then((data) => {
         checkItemInBag(req.session.user, data[0].id_obj).then((data2) => {
             if(data2.length > 0){
-                res.send('Vous ne pouvez pas acheter un objet que vous possédez déjà.<br/> <a href="/boutique">retourner en arrière</a>')
+                res.render('erreurboutique', {error: '<span class="erreur">Vous ne pouvez pas acheter un objet que vous possédez déjà.</span><div class="retour"> <a href="/boutique">Retourner à la boutique</a></div>', name: req.session.user.pseudo, title: req.session.user})
             }else{
                 insertBoutique(req.body.objetshop, req.session.user.email);
                 let exemplaires = data[0].nbExemplaires - 1;
@@ -127,30 +127,11 @@ app.post("/buyshop", (req,res) => {
         })
     })
 })
-        
-
-/*if(data.length > 0 || req.session.user.email) {
-           
-                res.send('Vous ne pouvez pas acheter un objet que vous possédez déjà.<br/> <a href="/boutique">retourner en arrière</a>')
-         
-        }
-        else {
-            res.redirect('/mesobjets');
-        }
-    });*/
-    //getItemById
-    //checkItemInBag(user, item) (select * from sac where id_obj = item.id_obj AND email = user.email)(data2)
-    //if(data2.length > 0)
-    // alors erreur
 
 app.get('/logout',(req,res) => {
     req.session.destroy;
     res.redirect('/login');
 });
-
-app.get('/erreur',(req,res) => {
-
-})
 
 //route after connection
 app.post("/index/", (req,res) => {
