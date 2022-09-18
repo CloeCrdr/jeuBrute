@@ -1,0 +1,91 @@
+.contentCombat {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contentCombat .vous, .contentCombat .adversaire {
+    width: 20%;
+    padding: 10px;
+    background-color: rgb(58, 56, 47, 0.7);background-color: rgb(58, 56, 47, 0.7);
+}
+
+.contentCombat .vous img, .contentCombat .adversaire img {
+    width: 50px;
+    border-radius: 50%;
+    background-color: pink;
+}
+
+.contentCombat .vous .pseudo, .contentCombat .adversaire .pseudo {
+    font-family: bebas neue;
+    font-weight: normal;
+    font-weight: lighter;
+    background: -webkit-linear-gradient(45deg,#271812, #211916);
+    background-clip: border-box;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contentCombat .messageCombat {
+    width: 50%;
+    padding: 15px;
+    max-height: 350px;
+    overflow: auto;
+    position: relative;
+}
+
+.contentCombat .messageCombat .result {
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.357);
+    letter-spacing: 4px;
+}
+
+.contentCombat .messageCombat .result span {
+    font-family: 'Bebas Neue';
+    font-weight: lighter;    
+    background: -webkit-linear-gradient(45deg,#1D2327, #2F3534);
+    background-clip: border-box;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contentCombat .messageCombat .tour {
+    padding: 5px;
+    margin: 5px 10px 5px 0px;
+    width: 120px;
+    float: left;
+    background-color: rgb(58, 56, 47, 0.7);
+    color: rgba(255, 255, 255, 0.583);
+    vertical-align: middle;
+}
+
+.contentCombat .messageCombat .message {
+    font-family: 'Quicksand';
+    font-style: italic;
+    text-align: left;
+    margin-bottom : 25px;
+    vertical-align: middle;
+}
+
+.contentCombat .stats {
+    margin-top: 10px;
+}
+    
+.stats span {
+    display: block;
+    background-color:   rgb(58, 56, 47, 0.7);
+
+    padding: 5px;
+    color: #bcb5b6;
+    margin: 2px;
+    font-family: 'Quicksand';
+    font-size: 0.8rem;
+}
+
+.stats hr {
+    border-bottom: 1px solid #58443c;
+    margin: 10px 2px 5px 2px;
+}

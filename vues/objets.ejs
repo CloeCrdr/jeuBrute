@@ -1,0 +1,81 @@
+<%- include('z-header') %>
+    <title>ROBOT FIGHTERS | équiper mon robot</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/profils.css">
+    <link rel="stylesheet" href="/objets.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&family=Oswald&family=Quicksand&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+</head>
+<body>
+    <div class="index">
+        <%- include('z-nav') -%>
+        <div class="objets">
+            <div class="title">Voir mon robot</div>
+            <h6><%= name %></h6>
+                <div class="sacRobot">        
+                    <div class="monRobot">
+                        <img src="<%= user.image %>" class="imgRobot"/>
+                    </div>
+                    <div class="mesObjets">
+                        <div class="mesObjetsEq"> 
+                            <div class="objEquip">
+                            <% for(objet of objets) {%> 
+                                    <% if(objet.type=="arme"){ %>
+                                            <a href="/desequiper/<%= objet.id_obj %>" id="delete" class="delete">
+                                                <span class="material-symbols-outlined">close</span>
+                                            </a>
+                                            <img src="<%= objet.img %>">                    
+                            <% } }%>
+                            </div>
+                            <div class="objEquip">
+                                <% for(objet of objets) {%> 
+                                    <% if(objet.type=="bouclier"){ %>
+                                  
+                                        <a href="/desequiper/<%= objet.id_obj %>" id="delete" class="delete">
+                                            <span class="material-symbols-outlined">close</span>
+                                        </a>
+                                        <img src="<%= objet.img %>">        
+                                <% } } %>
+                            </div>
+                            <div class="objEquip">
+                                <% for(objet of objets) {%>
+                                    <% if(objet.type=="tenue"){ %>
+                                   
+                                        <a href="/desequiper/<%= objet.id_obj %>" id="delete" class="delete">
+                                            <span class="material-symbols-outlined">
+                                            close
+                                            </span>
+                                        </a>
+                                        <img src="<%= objet.img %>">
+                                   
+                                <% }}%> 
+                            </div>                    
+                        </div>
+                    </div>
+              
+                    <div class="butObjets">
+                        <a href="/sac">Équiper mon Robot</a>
+                    </div>
+                    
+                </div>
+                <div class="descriptif">
+                    <span>Force : <%= user.force_rbt %></span>
+                
+                    <span>Défense :<strong> <%= user.defense %></strong></span>
+                    
+                    <span>Esquive :<strong> <%= user.esquive %></strong></span>
+                </div>
+                <div class="descriptif">
+                    <span>Points de vie :<strong> <%= user.pv %></strong></span>
+                    
+                    <span>Expérience :<strong> <%= user.experience %></strong></span>
+                    
+                    <span>Monnaie :<strong> <%= user.argent %></strong></span>
+                </div>
+            
+        </div>
+    </div>
+<%- include('z-footer') %>

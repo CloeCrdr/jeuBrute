@@ -1,0 +1,37 @@
+<%- include('z-header') -%>
+    <title>ROBOT FIGHTERS | index</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&family=Oswald&family=Quicksand&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+    <div class="index">
+        <%- include('z-nav') %>
+        
+        <div class="fights">
+            <div class="title">Préparez-vous pour le combat !</div>
+
+            <div class="contentUser">
+                
+                <% for (user of users) { %>
+                    <% if (user.pseudo !=name) {%>
+                        <div class="displayUser">
+                            <div class="avatar">
+                                <img src="<%= user.image %>" alt="<% user.pseudo %>"/>
+                            </div>
+                            <div class="name" title="<%= user.pseudo %>"><%= user.pseudo %></div>
+                            <div class="champ"><span>Points de vie</span> <%= user.pv %></div>
+                            <div class="champ"><span>Niveau</span> <%= user.niveau %></div>
+                            <div class="champ"><span>Experience</span> <%= user.experience %></div>
+                            <a href="/combat/<%= user.email %>">Défier ce robot</a>
+                        </div>
+                        <hr/>
+                <% }} %>
+            </div>
+        </div>
+    </div>
+    
+<%- include('z-footer') -%>

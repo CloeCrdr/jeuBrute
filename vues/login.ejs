@@ -1,0 +1,26 @@
+<%- include('z-header') -%>
+    <title>ROBOT FIGHTERS | login </title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/forms.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&family=Oswald&family=Quicksand&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="forms">
+        <div class="formContent">
+            <h1>Login</h1>
+            <h5>Robot fighters</h5>
+            <form action="/index" method="post">
+                <input type="text" name="email" id="" placeholder="email" autocomplete="off">
+                <input type="text" name="pseudo" id="" placeholder="nickname" autocomplete="off">
+                <input type="password" name="password" id="" placeholder="password" autocomplete="off">
+              
+                <input type="submit" value="log now">
+
+                <span>Not a member yet ? <a href="/">Register</a></span>
+            </form>
+        </div>
+        
+    </div>
+<%- include('z-footer') -%>

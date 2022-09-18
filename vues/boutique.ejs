@@ -1,0 +1,45 @@
+<%- include('z-header') -%>
+    <title>ROBOT FIGHTERS | équiper mon robot</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/profils.css">
+    <link rel="stylesheet" href="/objets.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&family=Oswald&family=Quicksand&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+    <div class="index">
+        <%- include('z-nav') -%>
+        <div class="objets">
+            <div class="title">La boutique</div>
+            <h6><%= name %></h6>
+            <br/><%= erreur%><br/>
+            <div class="boutique">
+                <form action="/buyshop" method="post">
+                    <div id="boutique">
+                    <% for (shop of shops) { %>
+                        <div class="contentObjects">
+                            <label class="objetshop">
+                                <input type="radio" name="objetshop" value="<%= shop.id_obj%>">
+
+                                <img src="<%= shop.img %>"><br/>
+                                <div class="descrObjets">
+                                <span class="exemplaires"><%= shop.nbExemplaires %></span>
+                                <p>
+                                    <span class="nom"><%= shop.nom %></span>
+                                    <span class="prix"><%= shop.prix %> po</span>
+                                </p>
+                                
+                                
+                                </div>
+                            </label>
+                        </div>
+                    <%}%>
+                    </div>
+                    <input type="submit" value="Acheter">
+                </form>
+            </div>
+        </div>
+    </div>
+<%- include('z-footer') -%>

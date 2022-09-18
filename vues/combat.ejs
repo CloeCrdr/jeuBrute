@@ -1,0 +1,63 @@
+<%- include('z-header') -%>
+    <title>ROBOT FIGHTERS | défier un robot </title>
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/profils.css">
+    <link rel="stylesheet" href="/combat.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&family=Oswald&family=Quicksand&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+    <div class="index">
+        <%- include('z-nav') -%>
+
+        <div class="combat">
+            <div class="title">Que le combat commence !</div>
+            <div class="retour"><a href="/index">Retourner à la liste des robots</a></div>
+
+            <div class="contentCombat">
+                <div class="vous">
+                    <div class="image">
+                        <img src="<%= user.image %>">
+                    </div>
+                    <div class="pseudo"><%= user.pseudo %></div>
+                    <div class="stats">
+                        <span><%= user.experience %> XP</span>
+                        <hr/>
+                        <span><%= user.argent%> PO</span>
+                        <hr/>
+                        <span><%= user.force_rbt%> pts de force</span>
+                        <span><%= user.defense %> pts de défense</span>
+                        <span><%= user.esquive %> pts d'esquive</span>
+                        <span><%= user.pv%> pts de vie</span>
+                    </div>
+                </div>
+
+                <div class="messageCombat">
+                    <%- combat %>
+                </div>
+
+                <div class="adversaire">
+                    <div class="image">
+                        <img src="<%= adversaire.image %>">
+                    </div>
+                    <div class="pseudo"><%= adversaire.pseudo %></div>
+                    <div class="stats">
+                        <span><%= adversaire.experience %> XP</span>
+                        <hr/>
+                        <span><%= adversaire.argent%> PO</span>
+                        <hr/>
+                        <span><%= adversaire.force_rbt%> pts de force</span>
+                        <span><%= adversaire.defense %> pts de défense</span>
+                        <span><%= adversaire.esquive %> pts d'esquive</span>
+                        <span><%= adversaire.pv%> pts de vie</span>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+   
+<%- include('z-footer') -%>

@@ -1,0 +1,81 @@
+
+.formContent {
+    width: 20%;
+    min-width: 250px;
+    padding: 10px;
+    height: 80%;
+    min-height: 500px;
+    background-color: rgb(58, 56, 47, 0.5);
+    box-shadow: 1px 2px 0px #444340;
+    position: absolute;
+    right: 55px;
+    text-align: center;
+}
+
+.formContent h1 {
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    margin-top: 25px;
+    font-family: bebas neue;
+    font-weight: normal;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    background: -webkit-linear-gradient(45deg,#4e2f24, #473630);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*text-shadow: 3px 0px 3px #553A37;*/
+}
+
+.formContent h5 {
+    font-weight: light;
+    font-weight: lighter;
+    font-family: bebas neue;
+    background: -webkit-linear-gradient(45deg,#1D2327, #2F3534);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 4px;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.formContent form {
+    margin-top: 35px;
+}
+.formContent form span {
+    font-size: 0.8rem;
+    color: rgba(218, 216, 196, 0.764);
+    display: block;
+    margin-top: 20px;
+}
+.formContent form span a {
+    color: rgb(148, 143, 112);
+    font-weight: bold;
+}
+
+.formContent form input[type="text"],.formContent form input[type="password"] {
+    background-color: rgba(104, 103, 89, 0.8);
+    color: rgba(255, 255, 255, 0.747);
+    border: 0px;
+    outline: none;
+    margin: 6px;
+    font-size: 1rem;
+    padding: 10px;
+    font-family: Quicksand;
+    width: 200px;
+}
+
+.formContent form input[type="submit"] {
+    padding: 10px;
+    font-family: Quicksand;
+    color: rgba(255, 255, 255, 0.747);
+    background-color: #46473e;
+    outline: none;
+    border: none;
+    margin: 6px;
+    width: 220px;
+    cursor: pointer;
+}

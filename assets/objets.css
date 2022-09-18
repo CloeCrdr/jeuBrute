@@ -1,0 +1,211 @@
+.sacRobot {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width:  60%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.monRobot {
+    padding: 20px;
+}
+
+.imgRobot {
+    width: 170px;
+    height: 170px;
+    border: 5px solid white;
+    padding: 2px;
+}
+
+.butObjets a {
+    display: block;
+    padding: 10px;
+    color: #bcb5b6;
+    font-family: 'Open Sans';
+    font-size: 0.9rem;
+    font-weight: light;
+    background-color: #423537c7;
+}
+.descriptif {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width:  60%;
+    margin: auto;
+    margin-top: 1%;
+}
+.descriptif span {
+    padding: 5px;
+    width: 145px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background-color: rgb(58, 56, 47, 0.7);
+    color: white;
+}
+
+
+.boutique {
+    display: flex;
+    margin: auto;
+    width: 70%;
+    flex-wrap: wrap;
+}
+
+.contentObjects {
+    width: 120px; 
+    height: 120px;
+    margin: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
+    background-color: rgba(255,255,255,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.contentObjects img {
+    height: 115px;
+    width: 115px;
+    object-fit: contain
+}
+
+.descrObjets {
+   margin-top: -60px;
+}
+
+.descrObjets .exemplaires {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 0.7rem;
+    background-color: #423537c7;
+    padding: 5px;
+    color: white;
+}
+
+.descrObjets p {
+    width: 116px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    position: absolute;
+    bottom: -2px;
+}
+
+.descrObjets .nom, .descrObjets .prix {
+    text-transform: uppercase;
+    font-size: 0.5rem;
+    font-weight: bold;
+    background-color: #423537db;
+    color: white;
+    padding: 5px;
+}
+
+.descrObjets .prix {
+    font-size: 0.65rem;
+    font-weight: normal;
+    color: #4e2f24;
+    background-color: #4235375e;
+    
+}
+
+
+.monSac {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 315px;
+    margin: auto;
+    margin-top: 10%;
+    height: 160px;
+}
+
+.objetSac {
+    background-color: white;
+    height: 70px;
+    width: 70px; 
+    overflow: hidden;
+    margin: 3px;
+}
+
+.mesObjetsEq {
+    height: 195px;
+    width: 70px; 
+    position: relative;
+    margin: -10px 0px 0px -35px !important;
+    overflow: hidden;
+}
+
+.objEquip {
+    width: 55px;
+    height: 55px;
+    margin: 9px;
+    overflow: hidden;
+    background-color: #c4b6b89d;
+    position: relative;
+    text-align: center;
+    object-fit: contain;
+}
+
+.objEquip a {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color:#4e2718;
+    color: white;
+    font-size: 1px!important;
+    display: flex;
+    align-items: center;
+}
+
+.objEquip img {
+    width: 50px;
+    padding: 2px;
+    object-fit: cover;
+    object-fit: contain;
+}
+
+
+.objetSac img {
+    height: 62px;
+    width: 62px;
+    padding: 2px;
+    object-fit: contain;
+}
+
+#boutique {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+}
+
+.objetshop > input, .equipements > input {
+    display: none;
+}
+
+.objetshop > input + img, .equipements > input + img {
+    cursor : pointer;
+    border: 2px solid transparent;
+}
+
+.objetshop >  input:checked +  img, .equipements > input:checked + img {
+    border: 2px solid #b64921c8;
+}
+
+.boutique input[type="submit"], .monSac input[type="submit"] {
+    padding: 10px;
+    font-family: Quicksand;
+    color: rgba(255, 255, 255, 0.747);
+    background-color: #46473e;
+    outline: none;
+    border: none;
+    margin: auto;
+    margin-top: 10px;
+    width: 250px;
+    cursor: pointer;
+}
