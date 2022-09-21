@@ -6,6 +6,7 @@ Le projet s'appelle "jeuBrute". Il faut modifier la connexion dans conn.js pour 
 
 - npm install
 - npm start 
+- tsc (pour compiler les fichiers TypeScript)
 
 ## Se connecter au projet
 
