@@ -1,9 +1,0 @@
-{
-  "version": 2,
-  "buildCommand": "npm run compile",
-  "functions": {
-    "api/index.js": {
-      "includeFiles": "dist/**"
-    }
-  }
-}
