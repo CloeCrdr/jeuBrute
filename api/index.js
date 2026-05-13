@@ -1,17 +1,22 @@
 //imports
-import {User} from './dist/classe/user.js'
-import {Objet} from './dist/classe/objet.js'
-import {addUser} from "./dist/model/register.js"
-import {selectUser, displayConnect, displayProfile, getAll, addAvatar, updateUser, updateStatsUserEquip, updateStatsUserDesequip} from "./dist/model/login.js"
-import {selectUserObjects, getBoutique, insertBoutique, updateBoutique, updateUserBoutique, selectObjById, getObjByIdInBag, getEquipedItemByType, equipItem, getItemById, getEquipedItems, checkItemInBag, desequipItem} from "./dist/model/objets.js"
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+import {User} from '../dist/classe/user.js'
+import {Objet} from '../dist/classe/objet.js'
+import {addUser} from "../dist/model/register.js"
+import {selectUser, displayConnect, displayProfile, getAll, addAvatar, updateUser, updateStatsUserEquip, updateStatsUserDesequip} from "../dist/model/login.js"
+import {selectUserObjects, getBoutique, insertBoutique, updateBoutique, updateUserBoutique, selectObjById, getObjByIdInBag, getEquipedItemByType, equipItem, getItemById, getEquipedItems, checkItemInBag, desequipItem} from "../dist/model/objets.js"
 import cookieSession from 'cookie-session'
 import express from "express"
 const app = express()
 
-app.set('views', './vues');
+app.set('views', path.join(process.cwd(), 'vues'))
 app.set('view engine', 'ejs')
 
-app.use(express.static("./assets"))
+app.use(express.static(path.join(process.cwd(), 'assets')))
 app.use(express.urlencoded({ extended: false }))
 
 app.use(cookieSession({
