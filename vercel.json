@@ -1,6 +1,11 @@
 {
   "version": 2,
   "buildCommand": "npm run compile",
+  "functions": {
+    "main.js": {
+      "includeFiles": "dist/**"
+    }
+  },
   "builds": [
     {
       "src": "main.js",
