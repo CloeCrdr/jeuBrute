@@ -3,14 +3,13 @@
   "buildCommand": "npm run compile",
   "functions": {
     "main.js": {
-      "runtime": "@vercel/node",
       "includeFiles": "dist/**"
     }
   },
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "main.js"
+      "dest": "/main.js"
     }
   ]
 }
