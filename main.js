@@ -232,8 +232,4 @@ app.post("/log", (req,res) => {
     })
 })
 
-let port = 3100;
-
-app.listen(port, () => {
-    console.log(`⚡️[server]: Server is listening on http://localhost:${port}`)
-})
+export default app;
