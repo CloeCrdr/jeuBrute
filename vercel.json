@@ -2,14 +2,8 @@
   "version": 2,
   "buildCommand": "npm run compile",
   "functions": {
-    "main.js": {
+    "api/index.js": {
       "includeFiles": "dist/**"
     }
-  },
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/main.js"
-    }
-  ]
+  }
 }
